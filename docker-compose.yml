@@ -5,6 +5,8 @@ services:
     build:
       context: ./docker/php
     container_name: symfony_app
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker"
     volumes:
       - ./app:/var/www/html
     ports:
