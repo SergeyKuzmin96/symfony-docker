@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     git \
+    default-mysql-client \
     && docker-php-ext-install pdo pdo_mysql zip
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug
